@@ -1,7 +1,6 @@
 /* Eric Uehling     1.3.2023 */
 
 #include "dist.h"
-
 #include <stdio.h>
 #include <string.h>
 
@@ -82,6 +81,7 @@ void load(char* filename, struct Grade_Distribution* grade_dist) {
     }
     fclose(in);
 }
+
 
 /* Eric Uehling
  * 1.3.2023

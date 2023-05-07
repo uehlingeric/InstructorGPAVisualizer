@@ -24,7 +24,7 @@ void update_inst(struct Instructor* inst, char* name, int num_classes, double gp
 /* Displays Instructor struct. */
 void display_inst(FILE* out, struct Instructor inst) {
     double gpa = inst.gpa_sum / inst.num_classes;
-    fprintf(out, "\t\tIntstructor: %s, Average GPA: %f, Number of Classes: %d\n", inst.name, gpa, inst.num_classes);
+    fprintf(out, "\t\tInstructor: %s, Average GPA: %f, Number of Classes: %d\n", inst.name, gpa, inst.num_classes);
 }
 
 /* Frees memory of Instructor struct. */
@@ -32,7 +32,7 @@ void free_inst(struct Instructor inst) {
     free(inst.name);
 }
 
-/* Initializes an Course struct. */
+/* Initializes a Course struct. */
 void init_course(struct Course* course, int size) {
     course->instructors = calloc(size, sizeof(struct Instructor) + 1);
     course->num = 0;
@@ -79,7 +79,7 @@ void free_course(struct Course course) {
     free(course.name);
 }
 
-/* Initializes an Department struct. */
+/* Initializes a Department struct. */
 void init_dept(struct Department* depart, int size) {
     depart->courses = calloc(size, sizeof(struct Course) + 1);
     depart->count = 0;
@@ -94,7 +94,7 @@ void update_dept(struct Department* depart, char* name) {
     strcpy(depart->name, name);
 }
 
-/* Dynamically adds an Course struct to a Department struct.*/
+/* Dynamically adds a Course struct to a Department struct.*/
 void add_course(struct Department* depart, struct Course course) {
     if (depart->count == depart->size) {
         depart->size *= 2;
@@ -121,14 +121,14 @@ void free_dept(struct Department depart) {
     free(depart.name);
 }
 
-/* Initializes an Grade_Distribution struct. */
+/* Initializes a Grade_Distribution struct. */
 void init_dist(struct Grade_Distribution* grade_dist, int size) {
     grade_dist->departments = calloc(size, sizeof(struct Department) + 1);
     grade_dist->count = 0;
     grade_dist->size = size;
 }
 
-/* Dynamically adds an Department struct to a Grade_Distribution struct.*/
+/* Dynamically adds a Department struct to a Grade_Distribution struct.*/
 void add_dept(struct Grade_Distribution* grade_dist, struct Department depart) {
     if (grade_dist->count == grade_dist->size) {
         grade_dist->size *= 2;
