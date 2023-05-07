@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define IN "C:\\Users\\Eric\\Desktop\\CS\\Personal Projects\\GradeDistribution\\CSVSorter\\GradeDistribution.csv"
-#define OUT "C:\\Users\\Eric\\Desktop\\CS\\Personal Projects\\GradeDistribution\\CSVSorter\\input.txt"
+#define INPUT_FILE_PATH "GradeDistribution.csv"
+#define OUTPUT_FILE_PATH "input.txt"
 #define MAX_LINE_LENGTH 4096
 #define NUM_COLUMNS 23
 
@@ -23,7 +23,7 @@ int main() {
     CSVSorter csv_sorter = {NULL, 0};
     char line[MAX_LINE_LENGTH];
 
-    FILE *input_file = fopen(IN, "r");
+    FILE *input_file = fopen(INPUT_FILE_PATH, "r");
     if (!input_file) {
         perror("Error opening input file");
         return EXIT_FAILURE;

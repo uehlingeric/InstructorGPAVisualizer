@@ -1,63 +1,47 @@
-Grade Distribution Analyzer
-This project aims to analyze the grade distribution of various courses and instructors at a given university. The program reads input from a CSV file containing course data and computes the average GPA of each instructor for each course. The output is then saved to a text file, displaying the average GPA of instructors per course, organized by department.
+# Grade Distribution Analyzer
 
-Getting Started
-These instructions will help you get a copy of the project and run it on your local machine.
+A project that analyzes the average GPA for each instructor in each course at Virginia Tech.
 
-Prerequisites
-A C compiler (such as GCC)
-A Unix-like environment or compatible terminal (such as Git Bash on Windows)
-Compilation
-Clone this repository:
-bash
-Copy code
-git clone https://github.com/username/GradeDistributionAnalyzer.git
-Navigate to the project folder:
-bash
-Copy code
-cd GradeDistributionAnalyzer
-Compile the project using the provided Makefile:
-bash
-Copy code
-make
-Usage
-Run the program by providing an input CSV file and specifying an output file:
+## Getting Started
 
-bash
-Copy code
+Follow the instructions below to run the project on your local machine.
+
+### Prerequisites
+
+- C compiler (e.g., GCC)
+- Java installed (for the CSVSorter)
+
+### Compiling and Running
+
+1. Open the terminal and navigate to the project folder.
+2. Compile the project using the provided Makefile:
+
+```bash
+make all
+```
+
+3. Run the project with the input and output file names:
+
+```bash
 ./dist input.txt output.txt
-Example Input
-The input file should be a CSV file with the following columns:
+```
 
-Year
-Term
-Department
-Course Number
-Course Title
-Instructor
-GPA
-Example:
+This will generate an `output.txt` file containing the average GPA of each instructor for each course.
 
-css
-Copy code
-2018,Fall,CS,101,Introduction to Computer Science,John Doe,3.5
-2019,Fall,CS,101,Introduction to Computer Science,Jane Smith,3.7
-Example Output
-The output file will display the average GPA of each instructor for each course, organized by department:
+## Usage
 
-yaml
-Copy code
-Grade Distribution: 2018 Fall - 2023 Fall
+The project reads an input file containing course information and calculates the average GPA for each instructor in each course. It outputs the results in a hierarchical format, with departments, courses, and instructors.
 
-Department: CS
-    Course: CS 101 - Introduction to Computer Science
-            Instructor: John Doe, Average GPA: 3.500000, Number of Classes: 1
-            Instructor: Jane Smith, Average GPA: 3.700000, Number of Classes: 1
-Contributing
-If you'd like to contribute to this project, please submit a pull request with your proposed changes.
+## Project Structure
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+- `dist.c` and `dist.h` contain the implementation of the data structures and related functions.
+- `main.c` contains the main function, which reads input files, performs the calculations, and writes the output.
+- The `CSVSorter` folder contains a Java program for preprocessing the GradeDistribution.csv file.
 
-Acknowledgements
-Eric Uehling for the initial implementation of the project
+## Author
+
+- Eric Uehling
+
+## Acknowledgements
+
+- Eric Uehling for the initial implementation of the project
