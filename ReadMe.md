@@ -1,6 +1,6 @@
 # Grade Distribution Analyzer
 
-A project that analyzes the average GPA for each instructor in each course at Virginia Tech.
+A project that analyzes the average GPA for each instructor in each course at Virginia Tech. This project was made as a guide to students who have the option to take a class with different proffesors. The output file shows each instructor for every course, along with their corresponding gpa.
 
 ## Getting Started
 
