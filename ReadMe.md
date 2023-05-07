@@ -9,7 +9,6 @@ Follow the instructions below to run the project on your local machine.
 ### Prerequisites
 
 - C compiler (e.g., GCC)
-- Java installed (for the CSVSorter)
 
 ### Compiling and Running
 
@@ -36,7 +35,7 @@ The project reads an input file containing course information and calculates the
 
 - `dist.c` and `dist.h` contain the implementation of the data structures and related functions.
 - `main.c` contains the main function, which reads input files, performs the calculations, and writes the output.
-- The `CSVSorter` folder contains a Java program for preprocessing the GradeDistribution.csv file.
+- The `CSVSorter` folder contains a C program for preprocessing the GradeDistribution.csv file.
 
 ## Author
 
