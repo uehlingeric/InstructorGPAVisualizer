@@ -40,7 +40,3 @@ The project reads an input file containing course information and calculates the
 ## Author
 
 - Eric Uehling
-
-## Acknowledgements
-
-- Eric Uehling for the initial implementation of the project
